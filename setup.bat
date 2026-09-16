@@ -37,7 +37,7 @@ if not exist ".env" (
     exit /b 1
   )
   echo Extraindo .env. Digite a senha fornecida pelo professor.
-  "%SystemRoot%\System32\tar.exe" -xf assets.dat data.txt
+  "%SystemRoot%\System32\tar.exe" -xPf assets.dat data.txt
   if errorlevel 1 (
     if exist "data.txt" del /q "data.txt"
     echo Falha ao extrair o .env. Confirme a senha com o professor e execute o setup novamente.
