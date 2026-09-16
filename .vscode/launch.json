@@ -8,9 +8,6 @@
       "module": "uvicorn",
       "args": [
         "backend.main:app",
-        "--reload",
-        "--reload-exclude",
-        ".venv/**",
         "--host",
         "127.0.0.1",
         "--port",
