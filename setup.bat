@@ -48,12 +48,13 @@ if not exist ".env" (
 )
 
 if /I "%~1"=="run" (
-  ".venv\Scripts\python.exe" -m uvicorn backend.main:app --reload --reload-exclude '.venv/**'
+  ".venv\Scripts\python.exe" -m uvicorn backend.main:app --reload --reload-dir backend --reload-dir frontend --reload-include "*.html" --reload-include "*.js" --reload-include "*.jsx" --reload-include "*.css" --host 127.0.0.1 --port 8000
   exit /b %errorlevel%
 )
 
 echo Setup concluido.
 echo Para ativar o ambiente: .venv\Scripts\activate
-echo Para rodar a API: .venv\Scripts\python.exe -m uvicorn backend.main:app --reload --reload-exclude '.venv/**'
+echo Para rodar a aplicacao: setup.bat run
+echo No VS Code, voce tambem pode abrir Executar e Depurar, selecionar "ChatLLM API (uvicorn)" e pressionar F5.
 
 endlocal

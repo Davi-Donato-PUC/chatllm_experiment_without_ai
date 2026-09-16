@@ -57,9 +57,19 @@ if [ ! -f ".env" ]; then
 fi
 
 if [ "${1:-}" = "run" ]; then
-  exec "$VENV_PYTHON" -m uvicorn backend.main:app --reload --reload-exclude '.venv/**'
+  exec "$VENV_PYTHON" -m uvicorn backend.main:app \
+    --reload \
+    --reload-dir backend \
+    --reload-dir frontend \
+    --reload-include '*.html' \
+    --reload-include '*.js' \
+    --reload-include '*.jsx' \
+    --reload-include '*.css' \
+    --host 127.0.0.1 \
+    --port 8000
 fi
 
 echo "Setup concluido."
 echo "Para ativar o ambiente: source .venv/bin/activate"
-echo "Para rodar a API: .venv/bin/python -m uvicorn backend.main:app --reload --reload-exclude '.venv/**'"
+echo "Para rodar a aplicacao: bash ./setup.sh run"
+echo "No VS Code, voce tambem pode abrir Executar e Depurar, selecionar 'ChatLLM API (uvicorn)' e pressionar F5."

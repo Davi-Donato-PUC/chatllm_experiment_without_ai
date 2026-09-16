@@ -32,7 +32,27 @@ setup.bat
    - Se o `.env` ja existir na raiz do projeto, a extracao e ignorada.
    - O `.env` extraido contem `OPENROUTER_API_KEY` e `OPENROUTER_MODEL`. Nunca faca commit dele (ja esta no `.gitignore`).
 
-4. Abra `http://127.0.0.1:8000` no navegador para usar o chat.
+4. Inicie a aplicacao com o script correspondente ao seu sistema:
+
+   Linux/Mac:
+
+   ```bash
+   bash ./setup.sh run
+   ```
+
+   Windows:
+
+   ```bat
+   setup.bat run
+   ```
+
+   Como alternativa no VS Code, abra **Executar e Depurar**, selecione
+   **ChatLLM API (uvicorn)** e pressione `F5`. As duas formas monitoram alteracoes
+   no backend e nos arquivos HTML, JavaScript, JSX e CSS do frontend.
+
+5. Abra `http://127.0.0.1:8000` no navegador para usar o chat. Quando um arquivo
+   do frontend mudar, o servidor sera reiniciado; atualize a pagina do navegador
+   para ver a alteracao.
 
 ## Endpoints da API
 
