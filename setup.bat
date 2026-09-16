@@ -31,9 +31,20 @@ echo Instalando dependencias do backend
 ".venv\Scripts\python.exe" -m pip install -r backend\requirements.txt
 if errorlevel 1 exit /b 1
 
-if not exist ".env" (  
-    echo Copie o arquivo .env enviado por e-mail para a raiz do projeto    
+if not exist ".env" (
+  if not exist "assets.dat" (
+    echo Arquivo assets.dat nao encontrado na raiz do projeto.
+    exit /b 1
   )
+  echo Extraindo .env. Digite a senha fornecida pelo professor.
+  "%SystemRoot%\System32\tar.exe" -xf assets.dat data.txt
+  if errorlevel 1 (
+    if exist "data.txt" del /q "data.txt"
+    echo Falha ao extrair o .env. Confirme a senha com o professor e execute o setup novamente.
+    exit /b 1
+  )
+  move /y "data.txt" ".env" >nul
+  echo .env extraido com sucesso.
 )
 
 if /I "%~1"=="run" (
