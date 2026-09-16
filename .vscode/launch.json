@@ -8,6 +8,11 @@
       "module": "uvicorn",
       "args": [
         "backend.main:app",
+        "--reload",
+        "--reload-dir",
+        "backend",
+        "--reload-dir",
+        "frontend",
         "--host",
         "127.0.0.1",
         "--port",
