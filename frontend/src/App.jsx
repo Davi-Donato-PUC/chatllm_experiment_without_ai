@@ -20,7 +20,7 @@ function App() {
   const chatHistory = useMemo(
     () => messages.filter((msg) => msg.role === "user" || msg.role === "assistant"),
     [messages]
-  );
+  ); 
 
   useEffect(() => {
     const el = messagesRef.current;
@@ -133,6 +133,21 @@ function App() {
     if (sessionId === activeSessionId) return;
     selectSession(sessionId);
   };
+
+
+
+// INSTRUÇÃO PERSONALIZADA AQUI
+ const setPersonalizedInstruction = async () => {
+   console.log('Setando instrução personalizada')
+
+
+
+
+ }
+
+
+
+
 
   const handleLogout = async () => {
     try {
@@ -270,6 +285,9 @@ function App() {
           <div className="header-right">
             <span className="user-email">{userEmail}</span>
             <button className="logout-btn" onClick={handleLogout}>Sair</button>
+            <input type='text' placeholder="Digite sua mensagem..." />
+            <button className="new-session-btn" onClick={setPersonalizedInstruction}>Definir Instrução Personalizada</button>
+
           </div>
         </header>
 

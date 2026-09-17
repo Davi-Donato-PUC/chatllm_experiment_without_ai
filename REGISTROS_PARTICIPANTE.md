@@ -7,16 +7,24 @@ Você pode utilizá-lo da forma que considerar mais útil para o seu trabalho. P
 documentação própria da solução;
 
 - anotações;
+Primeira coisa que faço é analisar superficialmente o código e tentar associar a função de cada arquivo
+Não conheço as bibliotecas e frameworks usados
+Pesquiso no google basicamente o funcionamento das bibliotecas
+Primeiro pesquiso sobre a FastAPI
+    Descobri como funciona o direcionamento de arquivos
+Pesquiso sobre React
+    Descubro como funciona a alocação do conteúdo html através do react
+
+Começo pela parte estética html e css que eu conheço mais
+
 
 - refatorações;
-
-- rascunhos;
+    Arquivo App.jsx : Adiciono um campo de escrita no header e um botao para a instrução
+    Arquivo App.jsx : Adiciono uma função que tenta aplicar a instrução personalizada
 
 - observações;
+    Estou tentando aprender com o próprio codigo para aplicar cosias novas
 
-- lembretes;
-
-- listas ou checklists;
 
 - referências;
 

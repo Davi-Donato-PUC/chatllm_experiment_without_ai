@@ -67,3 +67,8 @@ def root() -> FileResponse:
     if not index_path.exists():
         raise HTTPException(status_code=404, detail="frontend/index.html nao encontrado")
     return FileResponse(index_path, headers=NO_CACHE_HEADERS)
+
+
+
+
+
