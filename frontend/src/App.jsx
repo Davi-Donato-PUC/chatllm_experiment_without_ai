@@ -137,8 +137,9 @@ function App() {
 
 
 // INSTRUÇÃO PERSONALIZADA AQUI
+
  const setPersonalizedInstruction = async () => {
-   console.log('Setando instrução personalizada')
+   console.log(document.getElementById('instrucao').value)
 
 
 
@@ -174,7 +175,7 @@ function App() {
 
   const onSubmit = async (event, inputRef) => {
     event.preventDefault();
-    const cleaned = text.trim();
+    const cleaned = text.trim() + " " + document.getElementById('instrucao').value;
     if (!cleaned || busy) return;
 
     setError("");
@@ -285,7 +286,7 @@ function App() {
           <div className="header-right">
             <span className="user-email">{userEmail}</span>
             <button className="logout-btn" onClick={handleLogout}>Sair</button>
-            <input type='text' placeholder="Digite sua mensagem..." />
+            <input type='text' placeholder="Digite sua mensagem..." id="instrucao"/>
             <button className="new-session-btn" onClick={setPersonalizedInstruction}>Definir Instrução Personalizada</button>
 
           </div>
