@@ -10,7 +10,7 @@ Esta tarefa deve ser feita **inteiramente por voce, sem assistentes de IA**.
 
 - **Nao** use GitHub Copilot (chat, agente ou autocomplete), Claude, ChatGPT, Gemini, Cursor ou qualquer outra ferramenta de IA generativa.
 - **Desative** o autocomplete do Copilot no VS Code durante a tarefa.
-- Voce **pode** consultar documentacao oficial (FastAPI, SQLAlchemy, React, MDN, etc.), o codigo existente do projeto e suas proprias anotacoes.
+- Voce **pode** consultar documentacao oficial (FastAPI, SQLAlchemy, React, MDN, etc.), o codigo existente do projeto e suas proprias anotacoes. Para utilizar o google siga as configurações de **`CONFIG_GOOGLE.md`**.
 
 Os assistentes de IA deste repositorio foram configurados (`.github/copilot-instructions.md` e `.claude/`) para **recusar** qualquer implementacao. O objetivo do experimento e medir o seu entendimento do codigo, entao o uso de IA invalida sua participacao.
 
@@ -32,9 +32,15 @@ O arquivo `.env` e extraido pelo script de setup a partir de um arquivo protegid
    setup.bat
    ```
 
+   ou
+
+   ``` PowerShell
+   .\setup.bat
+   ```
+
 2. Quando o script pedir, **digite a senha fornecida pelo professor**. Os caracteres nao aparecem enquanto voce digita; isso e normal. Se a senha estiver errada, o setup para com erro; basta executa-lo novamente. A extracao usa ferramentas do proprio sistema: `unzip` no Linux/Mac (instale com `sudo apt install unzip` se faltar) e `tar` no Windows 10/11.
 3. Ao final, o arquivo `.env` estara na raiz do projeto.
-4. Rode a aplicacao (`bash ./setup.sh run` ou `setup.bat run`) e abra `http://127.0.0.1:8000`.
+4. Rode a aplicacao (`bash ./setup.sh run` ou `setup.bat run` ou `.\setup.bat run`) e abra `http://127.0.0.1:8000`.
 
 > 🛠️ **Passo a passo completo e solucao de problemas:** veja [README_SETUP.md](README_SETUP.md).
 
