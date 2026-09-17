@@ -24,6 +24,11 @@ Windows:
 ```bat
 setup.bat
 ```
+ou
+
+``` PowerShell
+.\setup.bat
+```
 
 3. O arquivo `.env` e extraido pelo script de setup a partir de um arquivo protegido por senha incluido no repositorio. Quando o script pedir, **digite a senha fornecida pelo professor**:
    - Os caracteres nao aparecem enquanto voce digita; isso e normal.
@@ -45,12 +50,17 @@ setup.bat
    ```bat
    setup.bat run
    ```
+   ou
+   ``` PowerShell
+   .\setup.bat run   
+   ```
+
 
    Como alternativa no VS Code, abra **Executar e Depurar**, selecione
    **ChatLLM API (uvicorn)** e pressione `F5`. As duas formas monitoram alteracoes
    no backend e nos arquivos HTML, JavaScript, JSX e CSS do frontend.
 
-5. Abra `http://127.0.0.1:8000` no navegador para usar o chat. Quando um arquivo
+6. Abra `http://127.0.0.1:8000` no navegador para usar o chat. Quando um arquivo
    do frontend mudar, o servidor sera reiniciado; atualize a pagina do navegador
    para ver a alteracao.
 
