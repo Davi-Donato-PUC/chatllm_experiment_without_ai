@@ -21,10 +21,12 @@ Começo pela parte estética html e css que eu conheço mais
 - refatorações;
     Arquivo App.jsx : Adiciono um campo de escrita no header e um botao para a instrução
     Arquivo App.jsx : Adiciono uma função que tenta aplicar a instrução personalizada
+    Arquivo App.jsx : Adicionei automaticamente a mensagem personalizada ao prompt sempre que o submit for dado
 
 - observações;
     Estou tentando aprender com o próprio codigo para aplicar cosias novas
-
+    Não consegui implantar no banco de dados com o tempo que tive 
+    Implementei um método simples apenas para enviar a infornação do input ao prompt
 
 - referências;
 
